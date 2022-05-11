@@ -1,0 +1,20 @@
+@import './typography';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: $font-poppins;
+}
+body{
+    background-color:#061425;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+

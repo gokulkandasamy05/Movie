@@ -1,0 +1,39 @@
+@import './flex';
+
+
+.navBar-links{
+    background-color:#000000d1;
+    // border-top: 0.5px solid white;
+    width:50%;
+    right:0;
+    height:90vh;
+    top:-900%;
+    visibility:hidden;
+    z-index: 5;
+    @include flex(column,left,flex-start);
+    .navBar-Linklist{
+        @include flex(column,left,center);
+        row-gap:1rem;
+        li{
+            list-style-type: none;
+            text-indent: 1.5rem;
+            padding:10px;
+            .navBar-link{
+                font-size:0.9rem;
+            }
+        }
+    }
+    
+}
+
+.navBar-anime{
+    top:100%;
+    transition: all 0.8s ease;
+    visibility:visible;
+}
+.navBar-anime--reverse{
+    top:-900%;
+    transition: all 0.8s ease;
+    visibility:hidden;
+}
+

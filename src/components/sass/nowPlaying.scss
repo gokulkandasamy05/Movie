@@ -1,0 +1,116 @@
+@import './flex';
+
+.nowPlaying{
+    @include flex(row,center,center);
+    width: 100%;
+    column-gap: 1rem;
+    padding:1rem;
+    .nowPlaying-movieSec{
+        padding:10px;
+        width:100%;
+        .nowPlaying-movie{
+            border-radius:10px;
+            background-image: linear-gradient(to left, #112743, rgb(0, 0, 0));
+            @include flex(row,center,space-between);
+            column-gap:5rem;
+            width: 100%;
+            overflow: hidden;
+
+            // rgba(11, 37, 81, 0.535)
+            .nowPlaying-movie--image{
+                border-radius:10px;
+                position: relative;
+                height:100%;
+                object-fit:cover;
+                transition:0.5s ease;
+            }
+            .nowPlaying-movie--image:hover{
+                transform: scale(1.02);
+                transition:0.5s ease;
+            }
+            .nowPlaying-movie--desc{
+                width:100%;           
+                text-align:left;
+                @include flex(column,left,center);
+                row-gap: 1rem;
+                .nowPlaying-movie--title,.nowPlaying-movie--overview{
+                    width:80%;
+                    text-align:left;
+                    color:white;
+                }
+                .nowPlaying-movie--overview{
+                    line-height: 1.5rem;
+                    font-size: 0.9rem;
+                    text-align: justify;
+                }
+                .nowPlaying-movie--btn{
+                    width: 15%;
+                    padding:10px;
+                    border:none;
+                    min-width:120px;
+                    border-radius:5px;
+                    background-color: #112743;
+                    color: #fff;
+                    transition: 0.5s ease;
+                    cursor: pointer;
+                }
+                .nowPlaying-movie--btn:hover{
+                    background-color:white;
+                    color:#112743;
+                    transition: 0.5s ease;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1024px){
+    .nowPlaying-movie{
+        overflow: hidden;
+        .nowPlaying-movie--image{
+            width:100%;
+            object-fit:fill;
+            filter:brightness(0.5)
+    }
+        .nowPlaying-movie--desc{
+            left:10%;
+            right:10%;
+            position:absolute;
+        }
+    }
+}
+
+
+@media screen and (max-width: 468px){
+    .nowPlaying-movie{
+        .nowPlaying-movie--image{
+            filter:brightness(0.4)
+        }
+        .nowPlaying-movie--desc{
+            width: 70%;
+            display:flex;
+            @include flex(column,left,center);
+            .nowPlaying-movie--title{
+                font-size: 100%;
+                text-align:center;
+                white-space: wrap;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:630px) {
+    .nowPlaying-movie{
+        .nowPlaying-movie--desc{
+            width: 80%;
+            .nowPlaying-movie--overview{
+                white-space:nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}

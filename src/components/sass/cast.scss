@@ -1,0 +1,28 @@
+@import './flex';
+
+.cast-section{
+    position:absolute;
+    top:2%;
+    right:3%;
+    z-index: 6;
+    text-decoration: none;
+    color:white;
+    backdrop-filter: blur(9px) saturate(200%);
+    background-color: rgba(164, 167, 167, 0.207);
+    border-radius: 5px;
+    padding:10px;
+    font-size:0.8rem;
+    transition:0.5s ease;
+}
+.cast-section:hover{
+    background-color:white;
+    color:black;
+    transition:0.5s ease;
+    cursor: pointer;
+}
+
+
+
+
+
+

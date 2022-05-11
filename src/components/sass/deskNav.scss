@@ -1,0 +1,60 @@
+
+@import './flex';
+// @import './typography';
+// @use './typography';
+
+.navBar{
+    width:100%;
+    @include flex(row,center,space-between);
+    background-color: #183152;
+    
+    .navBar-title{
+        color:#fff;
+        font-size:1.5rem;
+        text-decoration: none;
+    }
+    .links{
+        @include flex(row,right,flex-end);
+        width:50%;
+        // background-color: aqua;
+    }
+
+    &-link{
+        text-decoration: none;
+        cursor: pointer;
+        color:#fff;
+        padding:20px;
+        font-family: "Open Sans", "Helvetica Neue",;
+    }
+    &-link:hover{
+        color:rgb(105, 255, 255)
+    }
+    .movieList-sec{
+        // background-color:cadetblue;
+        position: relative;
+        @include flex(column,center,center);
+        
+        .movieList{
+            position:absolute;
+            @include flex(column,center,center);
+            z-index: 2;
+            top: 100%;
+            width: 150%;
+            visibility: hidden;
+            background-color:#183152;
+            // border-top: 0.5px solid #fff;
+            .movieList-link{
+                padding:10px;
+                @extend .navBar-link;
+                font-size:0.8rem;
+                color:white;
+            }
+        }
+        
+    }
+    .movieList-sec:hover{
+        .movieList{
+            visibility: visible;
+        }
+    }
+}

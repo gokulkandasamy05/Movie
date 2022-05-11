@@ -1,0 +1,22 @@
+@import './flex'; 
+
+
+$name:'upcoming';
+.#{$name}-section{
+    width: 100%;
+    @include flex(column,center,center);
+    row-gap:2rem;
+    padding:1rem;
+    .#{$name}-section--name{
+        width: 95%;
+        text-align:left;
+        color:white;
+    }
+    .#{$name}-movies{
+        overflow:auto;
+        width:95%;
+        @include flex(row,center,flex-start);
+        column-gap: 2rem;
+        
+    }
+}

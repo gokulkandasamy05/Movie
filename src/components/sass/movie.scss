@@ -1,0 +1,232 @@
+@import './flex';
+@import './typography';
+
+.navBar{
+    position: sticky;
+    top: 0;
+    z-index: 8;
+}
+
+.movie-section{
+    width: 100%;
+    .movie-background{
+        width: 100%;
+        height:90vh;
+        position: relative;
+        .favourite-notification{
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            z-index:10;
+            background: #fff;
+            padding:10px;
+            font-size:0.8rem;
+            border-radius:5px;
+            color: rgb(31, 166, 31);
+            font-weight: bold;
+            animation: popup 0.5s ease 0s 1 forwards;
+        }
+        .movie-background--image{
+            width:100%;
+            filter:brightness(0.25);
+            height: 100%;
+            object-fit:cover;
+            position:fixed;
+        }
+
+
+        .movie-contents{
+            z-index: 5;
+            position: absolute;
+            width:100%;
+            height:90vh;
+            row-gap:0.5rem;
+            @include flex(column-reverse,center,center);
+            &--details{
+                width:90%;
+                text-align:center;
+                color:aliceblue;
+                row-gap:1rem;
+                @include flex(column,center,center);
+                .movie-title{
+                    font-size:2rem;
+                }
+                .movie-desc{
+                    line-height:1.8rem;
+                    width:100%;
+                    font-size: 0.9rem;
+                    word-spacing: 0.2rem;
+                    font-family: $font-opensans;
+                }              
+                .movie-genre{
+                    // background-color:red;
+                    width:70%;
+                    column-gap:1rem;
+                    flex-wrap: wrap;
+                    row-gap:0.5rem;
+                    font-family: $font-opensans;
+                    font-size: 0.9rem;
+                    .genre:nth-child(1){
+                        list-style-type: none;
+                    }
+                    .genre{
+                        list-style-type: square;
+                    }
+                }
+                .movie-trailer{
+                    width: 100%;
+                    @include flex(row,center,space-around);
+                    column-gap: 1rem;
+                    &--btn,.addFavourite--btn{
+                        font-family: $font-opensans;
+                        @include flex(row,center,space-around);
+                        padding:10px;
+                        width:35%;
+                        column-gap: 0.8rem;
+                        max-width:120px;
+                        border-radius: 5px;
+                        // background-color: #183152;
+                        backdrop-filter: blur(9px) saturate(200%);
+                        background-color: rgba(164, 167, 167, 0.362);
+                        border:none;
+                        color:white;
+                        transition:0.5s ease;
+                        .playIcon,.favIcon{
+                            font-size:1.2rem;
+                            color:white;
+                        }
+                    }
+                    .movie-trailer--btn:hover,.addFavourite--btn:hover{
+                        background-color:white;
+                        color:black;
+                        transition:0.5s ease;
+                        cursor: pointer;
+                        .playIcon{
+                            color: rgb(193, 14, 14);
+                        }
+                        .favIcon{
+                            color:rgb(255, 179, 0);
+                        }
+                    }
+                }  
+            }
+            &--image{
+                width:50%;
+                padding:20px;
+                @include flex(column,center,center);
+                .movie-poster{
+                    width:100%;
+                    max-width:300px;
+                    filter:drop-shadow(15px 15px 150px rgb(0, 0, 0));
+                }
+            }
+        }
+
+
+        .trailer-video{
+            position:absolute;
+            background-color:rgba(0, 0, 0, 0.861);
+            width:100%;
+            height:100vh;
+            z-index: 7;
+            @include flex(row,center,center);
+            
+            .cancelIcon{
+                color: white;
+                z-index:10;
+                top:10%;
+                right:5%;
+                font-size:2rem;
+                position: absolute;
+            }
+        }
+
+    }
+
+}
+
+
+@keyframes popup {
+    0%{
+        transform: scale(0)
+    }
+    100%{
+        transform: scale(1)
+    }
+}
+
+@media screen and (max-width: 768px){
+    .movie-genre{
+        @include flex(row,center,center);
+        // background-color:#183152;
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    .movie-section{
+        .movie-background{
+            .movie-contents{
+                @include flex(row-reverse,center,center);
+                .movie-contents--details{
+                    width:70%;
+                    padding:30px 50px 30px 0px;;
+                    text-align:left;
+                    row-gap:2rem;
+                    .movie-desc,.movie-date,.movie-title{
+                        width: 70%;
+                        text-align:left;
+                    }
+                    .movie-genre{
+                        @include flex(row,center,flex-start);
+                        // background-color:red;
+                    }
+                    .movie-trailer{
+                        width: 70%;
+                        justify-content:flex-start;
+                    }
+                }
+                .movie-contents--image{
+                    @include flex(row,center,flex-end);
+                    .movie-poster{
+                        border-radius: 10px;
+                    }
+                }
+            }
+
+            .trailer-video{
+                position:fixed;
+                top:5vh;
+                .trailer-vedio--src{
+                    width:70%;
+                    height:70vh;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) and (min-width:425px){
+    .movie-contents{
+        top:20%;
+        .movie-contents--details{
+            width:90%;
+            .movie-desc{
+                width:100%;
+            }
+        }
+        .movie-trailer{
+            padding:1rem;
+        }
+    }
+    
+}
+
+
+
+@media screen and (max-width: 425px){
+    .movie-contents{
+        top:0;
+    }
+}

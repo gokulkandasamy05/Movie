@@ -1,0 +1,64 @@
+.navBar-links {
+  background-color: #000000d1;
+  width: 50%;
+  right: 0;
+  height: 90vh;
+  top: -900%;
+  visibility: hidden;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.navBar-links .navBar-Linklist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 1rem;
+}
+
+.navBar-links .navBar-Linklist li {
+  list-style-type: none;
+  text-indent: 1.5rem;
+  padding: 10px;
+}
+
+.navBar-links .navBar-Linklist li .navBar-link {
+  font-size: 0.9rem;
+}
+
+.navBar-anime {
+  top: 100%;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  visibility: visible;
+}
+
+.navBar-anime--reverse {
+  top: -900%;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  visibility: hidden;
+}
+/*# sourceMappingURL=mobilenavLinks.css.map */

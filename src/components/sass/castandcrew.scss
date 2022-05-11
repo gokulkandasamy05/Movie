@@ -1,0 +1,27 @@
+@import './flex';
+
+.castandcrew-section{
+    // background-color:red;
+    @include flex(column,center,center);
+    column-gap: 1rem;
+    row-gap: 2rem;
+    margin-top: 1rem;
+    padding-bottom:2rem;
+    .castName,.crewName{
+        color:white;
+        width:100%;
+        padding:1rem;
+    }
+    .creditCount,.crewCount{
+        font-size:0.9rem;
+        color:grey;
+    }
+    .profileCards{
+        // background-color:aqua;
+        width:90%;
+        @include flex(row,center,center);
+        flex-wrap: wrap;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+    }   
+}

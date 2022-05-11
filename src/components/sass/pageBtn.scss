@@ -1,0 +1,22 @@
+@import './flex';
+
+
+
+.page-btns{
+    @include flex(row,center,flex-end);
+    column-gap:1rem;
+    width:100%;
+    // background-color:red;
+    padding : 0 2rem 0 0;
+    position: relative;
+    .nextPage,.prevPage{
+        padding:5px;
+        border: none;
+        border-radius:50px
+    }
+    .nextPage:hover,.prevPage:hover{
+        background-color: black;
+        color:white;
+        
+    }
+}

@@ -1,0 +1,25 @@
+@import './flex'; 
+
+
+$name:'toprated';
+.#{$name}-section{
+    width: 100%;
+    @include flex(column,center,center);
+    row-gap:2rem;
+    padding:1rem;
+    .#{$name}-section--name{
+        width: 95%;
+        text-align:left;
+        color:white;
+    }
+    .#{$name}-movies{
+        overflow:auto;
+        width:95%;
+        @include flex(row,center,flex-start);
+        column-gap: 2rem;
+        // .movies-movie{
+        //     width:200px;
+        //     height: 250px;
+        // }
+    }
+}

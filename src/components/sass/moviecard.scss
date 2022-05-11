@@ -1,0 +1,101 @@
+
+
+
+
+@import './flex';
+
+$name:'movies';
+    .#{$name}-movie{
+        width:60%;
+        height:300px;
+        max-width: 200px;
+        min-width:200px;
+        @include flex(column,center,center);
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        .voteAvg{
+            position:absolute;
+            top:0%;
+            right: 0%;
+            font-size:0.7rem;
+            border-radius:0 0 0 10px ;
+            z-index:5;
+            padding:8px;
+            color:gold;
+            background-color:black;
+            font-weight:bold ;
+        }
+        .voteAvgNone{
+            display: none;
+        }
+        .#{$name}-movie--sec{
+            width:100%;
+            height:85%;
+            overflow: hidden;
+            position: relative;
+            
+            
+            .#{$name}-movie--image{
+                width:100%;
+                height:100%;
+                object-fit:cover;
+                transition: all 0.3s ease;
+            }
+            
+            // .#{$name}-movie--desc{
+            //     background: linear-gradient(to top,rgb(0, 0, 0),rgb(0, 0, 0,),rgb(18, 17, 17),rgba(0, 0, 0, 0));
+            //     position:absolute;
+            //     z-index: 5;
+            //     height:40%;
+            //     color:#fff;
+            //     width: 100%;
+            //     text-align:center;
+            //     font-size :0.8rem;
+            //     display: none;
+            //     bottom:0;
+            //     padding-bottom: 10px;
+            // } 
+        }
+        
+        .#{$name}-movie--sec:hover{
+            .#{$name}-movie--image{
+                transform: scale(1.05);
+                transition: all 0.5s ease; 
+            }
+            .#{$name}-movie--desc{
+                display: block;
+                overflow:auto;
+                position:absolute;
+                bottom:0;
+            }
+        }
+        .#{$name}-movie--title{
+            width:100%;
+            @include flex(column,center,center);
+            text-align:center;
+            background-color:#183152;
+            padding:5px;
+            height:15%;
+            font-family: 'Poppins', sans-serif;
+            font-size:0.8rem;
+            color: #fff;
+        }
+
+    
+
+        .trashIcon{
+            position:absolute;
+            top:0%;
+            right:0%;
+            background-color:#183152;
+            padding:10px;
+            font-size:1rem;
+            border-radius: 5px;
+            color: #fff;
+            display:none;
+        }
+    }
+
+
+   

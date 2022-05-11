@@ -1,0 +1,7 @@
+@import './flex';
+
+.home-section{
+    @include flex(column,center,center);
+    row-gap:3rem;
+    padding:0 0 2rem 0;
+}

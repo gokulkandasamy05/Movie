@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,aAAa,CAAA;ECCT,OAAO,EAAE,IAAI;EACb,cAAc,EDDA,MAAM;ECEpB,WAAW,EDFU,MAAM;ECG3B,eAAe,EDHa,MAAM;EAClC,OAAO,EAAC,IAAI;EACZ,OAAO,EAAC,UAAU;CACrB",
+    "sources": [
+        "../sass/home.scss",
+        "../sass/_flex.scss"
+    ],
+    "names": [],
+    "file": "home.css"
+}

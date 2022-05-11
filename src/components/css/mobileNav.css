@@ -1,0 +1,42 @@
+.navBar {
+  position: relative;
+  height: 10vh;
+  padding: 0 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 6;
+}
+
+.navBar .navBar-sec {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navBar .navBar-sec .navBar-sec--title {
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.navBar .navBar-sec .navBar-sec--icons .hamIcon, .navBar .navBar-sec .navBar-sec--icons .canIcon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.navBar .navBar-links {
+  position: absolute;
+}
+/*# sourceMappingURL=mobileNav.css.map */

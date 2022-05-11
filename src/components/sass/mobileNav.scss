@@ -1,0 +1,29 @@
+@import './flex';
+
+.navBar{
+    position: relative;
+    height:10vh;
+    padding: 0 20px;
+    position:sticky;
+    top:0;
+    z-index:6;
+    .navBar-sec{
+        width: 100%;
+        @include flex(row,center,space-between);
+        .navBar-sec--title{
+            color:#fff;
+        font-size:1.2rem;
+        text-decoration: none;
+        }
+        .navBar-sec--icons{
+            .hamIcon,.canIcon{
+                font-size:1.5rem;
+                color:white;
+            }
+        }
+    }
+    .navBar-links{
+        position:absolute;
+    }
+    
+}

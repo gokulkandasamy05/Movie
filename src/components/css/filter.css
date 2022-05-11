@@ -1,0 +1,91 @@
+.filter-section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+}
+
+.filter-section--btn {
+  width: 100%;
+  padding: 10px;
+  max-width: 250px;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  background-color: #183152;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.filter-section--btn i {
+  font-size: 1.1rem;
+  cursor: pointer;
+  height: 100%;
+  width: 50%;
+}
+
+.filter-section .filter-section--sections {
+  background-color: #183152;
+  padding: 10px;
+  position: absolute;
+  border-radius: 10px;
+  top: 110%;
+  z-index: 6;
+  overflow: hidden;
+  row-gap: 1rem;
+}
+
+.filter-section .filter-section--sections .filter-year, .filter-section .filter-section--sections .filter-language, .filter-section .filter-section--sections .filter-genre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  padding: 10px;
+}
+
+.filter-section .filter-section--sections .filter-year .filter-year--label, .filter-section .filter-section--sections .filter-year .filter-language--label, .filter-section .filter-section--sections .filter-year .filter-genre--label, .filter-section .filter-section--sections .filter-language .filter-year--label, .filter-section .filter-section--sections .filter-language .filter-language--label, .filter-section .filter-section--sections .filter-language .filter-genre--label, .filter-section .filter-section--sections .filter-genre .filter-year--label, .filter-section .filter-section--sections .filter-genre .filter-language--label, .filter-section .filter-section--sections .filter-genre .filter-genre--label {
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.filter-section .filter-section--sections .filter-year .filter-year--label .filter-year--select, .filter-section .filter-section--sections .filter-year .filter-year--label .filter-language--select, .filter-section .filter-section--sections .filter-year .filter-year--label .filter-genre--select, .filter-section .filter-section--sections .filter-year .filter-language--label .filter-year--select, .filter-section .filter-section--sections .filter-year .filter-language--label .filter-language--select, .filter-section .filter-section--sections .filter-year .filter-language--label .filter-genre--select, .filter-section .filter-section--sections .filter-year .filter-genre--label .filter-year--select, .filter-section .filter-section--sections .filter-year .filter-genre--label .filter-language--select, .filter-section .filter-section--sections .filter-year .filter-genre--label .filter-genre--select, .filter-section .filter-section--sections .filter-language .filter-year--label .filter-year--select, .filter-section .filter-section--sections .filter-language .filter-year--label .filter-language--select, .filter-section .filter-section--sections .filter-language .filter-year--label .filter-genre--select, .filter-section .filter-section--sections .filter-language .filter-language--label .filter-year--select, .filter-section .filter-section--sections .filter-language .filter-language--label .filter-language--select, .filter-section .filter-section--sections .filter-language .filter-language--label .filter-genre--select, .filter-section .filter-section--sections .filter-language .filter-genre--label .filter-year--select, .filter-section .filter-section--sections .filter-language .filter-genre--label .filter-language--select, .filter-section .filter-section--sections .filter-language .filter-genre--label .filter-genre--select, .filter-section .filter-section--sections .filter-genre .filter-year--label .filter-year--select, .filter-section .filter-section--sections .filter-genre .filter-year--label .filter-language--select, .filter-section .filter-section--sections .filter-genre .filter-year--label .filter-genre--select, .filter-section .filter-section--sections .filter-genre .filter-language--label .filter-year--select, .filter-section .filter-section--sections .filter-genre .filter-language--label .filter-language--select, .filter-section .filter-section--sections .filter-genre .filter-language--label .filter-genre--select, .filter-section .filter-section--sections .filter-genre .filter-genre--label .filter-year--select, .filter-section .filter-section--sections .filter-genre .filter-genre--label .filter-language--select, .filter-section .filter-section--sections .filter-genre .filter-genre--label .filter-genre--select {
+  padding: 10px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=filter.css.map */

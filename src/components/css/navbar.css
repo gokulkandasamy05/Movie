@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+.navBar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  background-color: #243447;
+}
+
+.navBar-link, .navBar .movieList-sec .movieList .movieList-link {
+  text-decoration: none;
+  color: #fff;
+  padding: 20px;
+  font-family: "Open Sans", "Helvetica Neue";
+}
+
+.navBar-link:hover, .navBar .movieList-sec .movieList .movieList-link:hover {
+  color: #69ffff;
+}
+
+.navBar .movieList-sec {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navBar .movieList-sec .movieList {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 2;
+  top: 100%;
+  width: 150%;
+  visibility: hidden;
+  background-color: #243447;
+}
+
+.navBar .movieList-sec .movieList .movieList-link {
+  padding: 10px;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.navBar .movieList-sec:hover .movieList {
+  visibility: visible;
+}
+/*# sourceMappingURL=navbar.css.map */

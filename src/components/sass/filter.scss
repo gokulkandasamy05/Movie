@@ -1,0 +1,52 @@
+@import './flex';
+
+
+.filter-section{
+    // padding-bottom: 1rem;
+    position: relative;
+    @include flex(row,center,flex-end);
+    column-gap: 2rem;
+    &--btn{
+        width:100%;
+        padding:10px;
+        max-width:250px;
+        column-gap:2rem;
+        background-color:#183152;
+        color:#fff;
+        border:none;
+        border-radius:5px;
+        @include flex(row,center,space-between);
+        i{
+            font-size:1.1rem;
+            cursor: pointer;
+            height:100%;
+            width:50%;
+        }
+    }
+    .filter-section--sections{
+        background-color:#183152;
+        padding:10px;
+        position:absolute;
+        border-radius: 10px;
+        top: 110%;
+        z-index:6;
+        overflow:hidden;
+        row-gap: 1rem;
+        .filter-year,.filter-language,.filter-genre{
+            // background-color:aquamarine;
+            @include flex(row,flex-start,space-between);
+            column-gap: 1rem;
+            padding:10px;
+
+            .filter-year--label,.filter-language--label,.filter-genre--label{
+                font-size:0.8rem;
+                color:#fff;
+                .filter-year--select,.filter-language--select,.filter-genre--select{
+                    padding:10px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    
+}

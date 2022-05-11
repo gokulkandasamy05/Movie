@@ -1,0 +1,106 @@
+.movies-movie {
+  width: 60%;
+  height: 300px;
+  max-width: 200px;
+  min-width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.movies-movie .voteAvg {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  font-size: 0.7rem;
+  border-radius: 0 0 0 10px;
+  z-index: 5;
+  padding: 8px;
+  color: gold;
+  background-color: black;
+  font-weight: bold;
+}
+
+.movies-movie .voteAvgNone {
+  display: none;
+}
+
+.movies-movie .movies-movie--sec {
+  width: 100%;
+  height: 85%;
+  overflow: hidden;
+  position: relative;
+}
+
+.movies-movie .movies-movie--sec .movies-movie--image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.movies-movie .movies-movie--sec:hover .movies-movie--image {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.movies-movie .movies-movie--sec:hover .movies-movie--desc {
+  display: block;
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+}
+
+.movies-movie .movies-movie--title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: #183152;
+  padding: 5px;
+  height: 15%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.movies-movie .trashIcon {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  background-color: #183152;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  color: #fff;
+  display: none;
+}
+/*# sourceMappingURL=moviecard.css.map */
